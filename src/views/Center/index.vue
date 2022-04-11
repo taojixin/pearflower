@@ -1,6 +1,6 @@
 <template>
   <div class="center">
-    <div class="header"></div>
+    <Header></Header>
     <div class="center w">
       <!-- 左侧部分 -->
       <div class="left">
@@ -48,6 +48,7 @@
 
 <script>
 import {reqAccount} from '../../api/index'
+import Header from '../../components/Header'
 export default {
   created() {
     this.getAccount()
@@ -80,6 +81,9 @@ export default {
       const {data} = await reqAccount()
       this.account = data.account
     }
+  },
+  components: {
+    Header
   }
 };
 </script>
@@ -107,10 +111,10 @@ export default {
   width: 1200px;
   margin: 0 auto;
 }
-.header {
-  height: 100px;
-  background-color: rgb(187, 223, 113);
-}
+// .header {
+//   height: 100px;
+//   background-color: rgb(187, 223, 113);
+// }
 
 .center {
   position: relative;
