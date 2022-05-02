@@ -1,6 +1,6 @@
 <template>
   <div class="logistics">
-    物流信息
+    <h2>物流信息</h2>
   </div>
 </template>
 

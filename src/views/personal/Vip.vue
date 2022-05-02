@@ -1,6 +1,7 @@
 <template>
   <div class="vip">
-    我的会员
+    <h2>我的会员</h2>
+    <p>暂无相关会员信息</p>
   </div>
 </template>
 

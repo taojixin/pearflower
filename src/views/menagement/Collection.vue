@@ -1,6 +1,6 @@
 <template>
   <div class="collection">
-    收藏列表
+    <h2>收藏列表</h2>
   </div>
 </template>
 

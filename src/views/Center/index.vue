@@ -68,7 +68,7 @@ export default {
         { text: '购买记录', path: 'record'},
       ],
       change: [
-        { text: '个人信息', path: 'information'},
+        // { text: '个人信息', path: 'information'},
         { text: '收货地址', path: 'address'},
       ]
     }
@@ -188,7 +188,7 @@ export default {
     position: absolute;
     right: 0;
     top: 0;
-    border: 1px solid black;
+    border-top: 1px solid black;
     padding: 20px;
   }
 }

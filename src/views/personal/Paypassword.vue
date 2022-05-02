@@ -55,6 +55,7 @@
             <input type="text" />
           </div>
           <button class="last">保存</button>
+        <button class="send">发送验证码</button>
         </div>
       </el-tab-pane>
     </el-tabs>
@@ -90,9 +91,23 @@ export default {};
     font-size: 16px;
     background-color: rgb(179, 244, 179);
     border: none;
+    border-radius: 3px;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .8;
+    }
   }
   .last {
     top: 170px;
+  }
+  .send {
+    width: 90px;
+    left: 300px;
+    top: 45px;
+    font-size: 12px;
+    height: 25px;
+    background-color: rgb(107, 241, 107);
   }
 }
 </style>

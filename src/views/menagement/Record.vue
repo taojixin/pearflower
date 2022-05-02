@@ -1,6 +1,6 @@
 <template>
   <div class="record">
-    购买记录
+    <h2>购买记录</h2>
   </div>
 </template>
 
