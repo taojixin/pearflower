@@ -89,32 +89,6 @@ export default {
 </script>
 
 <style lang="less">
-* {
-  box-sizing: border-box;
-  a {
-    text-decoration: none;
-  }
-  ul {
-    list-style: none;
-    user-select: none;
-  }
-  h4 {
-    margin: 0;
-    user-select: none;
-  }
-  ul {
-    margin: 0;
-    padding: 0;
-  }
-}
-.w {
-  width: 1200px;
-  margin: 0 auto;
-}
-// .header {
-//   height: 100px;
-//   background-color: rgb(187, 223, 113);
-// }
 
 .center {
   position: relative;

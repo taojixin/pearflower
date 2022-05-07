@@ -4,8 +4,12 @@ import router from './router'
 
 // import dotenv from './config'
 import '@/mockjs'
-
+// 按需引入elementUI组件
 import '@/plugins/element'
+// 引入全局样式
+import '@/assets/css/global.css'
+// 引入字体图标
+import '@/assets/fonts/iconfont.css'
 
 Vue.config.productionTip = false
 

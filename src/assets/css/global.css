@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  user-select: none;
+}
+h4 {
+  margin: 0;
+  user-select: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
