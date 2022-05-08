@@ -7,9 +7,17 @@ const reqAccount = () => {
   })
 }
 
+const getEntries = () => {
+  return requests({
+    url: '/entries',
+    method: 'get'
+  })
+}
+
 
 
 
 export {
   reqAccount,
+  getEntries
 }

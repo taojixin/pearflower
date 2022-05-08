@@ -1,7 +1,7 @@
 <template>
-  <div class="community">
-    <Header></Header>
-    <div class="communication-community w">
+  <div class="community clearfix">
+    <Header name="top"></Header>
+    <div class="communication-community w clearfix">
       <!-- 左侧 -->
       <div class="left-community">
         <div class="head-protrait">
@@ -35,18 +35,35 @@
       <!-- 右侧 -->
       <div class="right-community">
         <h4>交流社区</h4>
-        <Entry></Entry>
-        <Entry></Entry>
-        <Entry></Entry>
+        <Entry v-for="item in entries" :key="item.id" :message="item"></Entry>
       </div>
+    </div>
+    <div class="backtotop">
+      <a class="iconfont icon-dingbu backtotop" href="#top"></a>
     </div>
   </div>
 </template>
 
 <script>
 import Header from "../../components/Header";
-import Entry from './Entry.vue'
+import Entry from "./Entry.vue";
+import {getEntries} from '../../api/index'
 export default {
+  created() {
+    this.getEntries();
+  },
+  data() {
+    return {
+      entries: [],
+    };
+  },
+  methods: {
+    async getEntries() {
+      const data = await getEntries()
+      this.entries = data.data.entries
+    }
+  },
+
   components: {
     Header,
     Entry,
@@ -57,16 +74,28 @@ export default {
 <style lang="less">
 @bgColorLeft: rgb(215, 219, 180);
 @bgColorRight: rgb(244, 245, 235);
-
+// 清除浮动
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  // 兼容低版本浏览器
+  *zoom: 1;
+}
+// 内容部分
 .communication-community {
   border: 1px solid pink;
-  overflow: hidden;
   // 左侧
   .left-community {
-    position: relative;
+    position: fixed;
     float: left;
     width: 200px;
-    height: 600px;
+    height: 400px;
+    border-radius: 10px;
     background-color: @bgColorLeft;
     // 公共样式
     .head-protrait,
@@ -148,10 +177,27 @@ export default {
     float: right;
     padding: 20px;
     width: 980px;
-    height: 100vh;
     background-color: @bgColorRight;
     h4 {
       color: rgb(218, 232, 91);
+    }
+  }
+}
+.backtotop {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(232, 238, 193);
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s;
+  a {
+    font-size: 40px;
+    &:hover {
+      cursor: pointer;
+      background-color: rgb(221, 232, 149);
     }
   }
 }

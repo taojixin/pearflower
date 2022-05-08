@@ -1,7 +1,20 @@
 import Mock from 'mockjs'
 // const Mock = require('mockjs')
 
-Mock.mock('/api/account', 'get',{
+let Random = Mock.Random
+// 随机生成一个常见的中文姓名。
+Random.cname()
+// 随机生成日期
+Random.date()
+// 随机生成一句中文标题
+Random.ctitle()
+// 随机生成一段中文文本
+Random.cparagraph()
+// 生成一段随机的 Base64 图片编码。
+Random.dataImage()
+
+
+Mock.mock('/api/account', 'get', {
   code: 0,
   msg: 'success',
   data: {
@@ -13,7 +26,126 @@ Mock.mock('/api/account', 'get',{
     ]
   }
 })
+Mock.mock('/api/entries', 'get', {
+  code: 0,
+  msg: 'success',
+  data: {
+    'entries': [
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+      {
+        'id|1-999': 0,
+        name: "@cname",
+        data: '@date',
+        title: '@ctitle',
+        content: '@cparagraph',
+        "browse|20-999": 125,
+        "good|1-999": 1231,
+        "comments|1-99": 0,
+        imagesurl: '@dataImage'
+      },
+    ]
+  }
+})
 
+// 设置延迟
 // Mock.setup({
 //   timeout: "500-1000",
 // });

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 // import dotenv from './config'
-import '@/mockjs'
+import '@/mockjs/index'
 // 按需引入elementUI组件
 import '@/plugins/element'
 // 引入全局样式
