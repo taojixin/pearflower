@@ -3,20 +3,22 @@ import VueRouter from 'vue-router'
 
 import Center from '@/views/Center'
 // 账号中心
-import Account from '@/views/personal/Account'
-import Vip from '@/views/personal/Vip'
-import Paypassword from '@/views/personal/Paypassword'
-import Resetpassword from '@/views/personal/Resetpassword'
+import Account from '@/views/Center/personal/Account'
+import Vip from '@/views/Center/personal/Vip'
+import Paypassword from '@/views/Center/personal/Paypassword'
+import Resetpassword from '@/views/Center/personal/Resetpassword'
 // 交易管理
-import Order from '@/views/menagement/Order'
-import Logistics from '@/views/menagement/Logistics'
-import Collection from '@/views/menagement/Collection'
-import Record from '@/views/menagement/Record'
+import Order from '@/views/Center/menagement/Order'
+import Logistics from '@/views/Center/menagement/Logistics'
+import Collection from '@/views/Center/menagement/Collection'
+import Record from '@/views/Center/menagement/Record'
 // 设置
-import Information from '@/views/setting/Information'
-import Address from '@/views/setting/Address'
+import Information from '@/views/Center/setting/Information'
+import Address from '@/views/Center/setting/Address'
 // 交流中心
-import community from '@/views/community'
+import community from '@/views/Community'
+// 分享
+import Essay from '@/views/Community/Essay'
 
 
 Vue.use(VueRouter)
@@ -35,7 +37,8 @@ const routes = [
     { path: '/information', component: Information},
     { path: '/address', component: Address},
   ]},
-  { path: '/community', component: community}
+  { path: '/community', component: community},
+  { path: '/essay', component: Essay}
 ]
 
 const router = new VueRouter({

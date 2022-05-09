@@ -16,14 +16,14 @@
           <span>0</span>
         </div>
         <!-- 我的分享 -->
-        <div class="myshare my">
+        <div class="myshare my" @click="jump('/essay')">
           <i class="iconfont icon-tiwen1"></i>
           <span>分享</span>
         </div>
         <!-- 我的收藏 -->
         <div class="mycollection my">
           <i class="iconfont icon-shoucang"></i>
-          <span>我的收藏</span>
+          <span>我的分享</span>
         </div>
         <!-- 浏览记录 -->
         <div class="mybrowsing my">
@@ -46,7 +46,7 @@
 
 <script>
 import Header from "../../components/Header";
-import Entry from "./Entry.vue";
+import Entry from "../../components/community/Entry.vue";
 import {getEntries} from '../../api/index'
 export default {
   created() {
@@ -58,9 +58,14 @@ export default {
     };
   },
   methods: {
+    // 获取条目
     async getEntries() {
       const data = await getEntries()
       this.entries = data.data.entries
+    },
+    // 跳转
+    jump(path) {
+      this.$router.push(path)
     }
   },
 

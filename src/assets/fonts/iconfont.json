@@ -6,6 +6,76 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "577395",
+      "name": "向上2",
+      "font_class": "xiangshang2",
+      "unicode": "e76e",
+      "unicode_decimal": 59246
+    },
+    {
+      "icon_id": "577399",
+      "name": "向下2",
+      "font_class": "xiangxia2",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
+      "icon_id": "577402",
+      "name": "向右1",
+      "font_class": "xiangyou1",
+      "unicode": "e775",
+      "unicode_decimal": 59253
+    },
+    {
+      "icon_id": "577406",
+      "name": "向左1",
+      "font_class": "xiangzuo1",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    },
+    {
+      "icon_id": "68268",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "145472",
+      "name": "分享",
+      "font_class": "fenxiang1",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "201555",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "630128",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "1025089",
+      "name": "艾特",
+      "font_class": "aite",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "12097446",
+      "name": "话题",
+      "font_class": "huati",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
       "icon_id": "2019092",
       "name": "提问",
       "font_class": "tiwen",
