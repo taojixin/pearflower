@@ -16,12 +16,12 @@
           <span>0</span>
         </div>
         <!-- 我的分享 -->
-        <div class="myshare my" @click="jump('/essay')">
+        <div class="myshare my" @click="jump('/writing')">
           <i class="iconfont icon-tiwen1"></i>
           <span>分享</span>
         </div>
         <!-- 我的收藏 -->
-        <div class="mycollection my">
+        <div class="mycollection my" @click="jump('/myshare')">
           <i class="iconfont icon-shoucang"></i>
           <span>我的分享</span>
         </div>

@@ -1,19 +1,19 @@
 <template>
-  <div class="essay">
+  <div class="writing">
     <!-- <HeadOne></HeadOne> -->
     <Header></Header>
-    <div class="content-essay q">
+    <div class="content-writing q">
       <img src="../../../assets/images/head.jpg" class="myhead">
-      <div class="myessay"><span>我的分享</span></div>
+      <div class="mywriting"><span>我的分享</span></div>
       <!-- 书写我的分享 -->
-      <div class="write-essay">
-        <textarea class="essay-textarea"></textarea>
+      <div class="write-writing">
+        <textarea class="writing-textarea"></textarea>
         <span class="face"><i class="iconfont icon-biaoqing"></i></span>
         <span class="aite"><i class="iconfont icon-aite"></i></span>
         <span class="topic"><i class="iconfont icon-huati"></i></span>
         <span class="pic"><i class="iconfont icon-zhaoxiangji"></i></span>
       </div>
-      <button class="push-essay">发表</button>
+      <button class="push-writing">发表</button>
       <div class="back-community" @click="jump('/community')">
         返回社区
       </div>
@@ -34,7 +34,7 @@ export default {
     jump(path) {
       this.$router.push(path)
     }
-  }
+  } 
 
 }
 </script>
@@ -45,7 +45,7 @@ export default {
   width: 60%;
 }
 // 主体部分
-.content-essay {
+.content-writing {
   height: 700px;
   padding: 10px;
   position: relative;
@@ -60,7 +60,7 @@ export default {
     box-shadow: 2px 2px 5px 1px rgb(218, 232, 91);
   }
   // 我的分享
-  .myessay {
+  .mywriting {
     margin: 0;
     padding: 10px 0 10px 20px;
     border-bottom: 1px solid rgb(230, 230, 230);
@@ -75,12 +75,12 @@ export default {
     }
   }
   // 书写区域
-  .write-essay {
+  .write-writing {
     width: 80%;
     border: 2px solid rgb(230, 230, 230);
     padding-bottom: 10px;
     // 文本框
-    .essay-textarea {
+    .writing-textarea {
       width: 100%;
       height: 400px;
       font-size: 20px;
@@ -106,7 +106,7 @@ export default {
     }
   }
   // 提交按钮
-  .push-essay {
+  .push-writing {
     position: absolute;
     bottom: 100px;
     left: 40%;

@@ -14,3 +14,10 @@
 //   // 打包不生成map文件
 //   productionSourceMap: false,
 // }
+// module.exports = {
+//   devServer: {
+//     port: 8080,
+//     open: true,
+//     hot: true,
+//   }
+// }
