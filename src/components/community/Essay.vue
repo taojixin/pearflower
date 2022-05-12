@@ -162,6 +162,7 @@ export default {
       font-size: 35px;
     }
   }
+
   hr {
     color: #e7e7e7;
     border: none;

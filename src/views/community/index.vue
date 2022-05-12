@@ -35,7 +35,7 @@
       <!-- 右侧 -->
       <div class="right-community">
         <h4>交流社区</h4>
-        <Entry v-for="item in entries" :key="item.id" :message="item"></Entry>
+        <Entry @click="readEssay('/essay')" v-for="item in entries" :key="item.id" :message="item"></Entry>
       </div>
     </div>
     <div class="backtotop">
@@ -65,6 +65,10 @@ export default {
     },
     // 跳转
     jump(path) {
+      this.$router.push(path)
+    },
+    // 
+    readEssay(path) {
       this.$router.push(path)
     }
   },

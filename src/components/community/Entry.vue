@@ -1,5 +1,5 @@
 <template>
-  <div class="entry">
+  <div class="entry" @click="readEssay('/essay')">
     <!-- 文章作者及时间 -->
     <div class="meta-container">
       <span class="username-entry">{{ message.name }}</span>
@@ -32,6 +32,11 @@ export default {
     message: {
       type: Object
     },
+  },
+  methods: {
+     readEssay(path) {
+      this.$router.push(path)
+    }
   }
 };
 </script>
