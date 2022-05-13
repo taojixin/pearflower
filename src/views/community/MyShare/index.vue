@@ -30,6 +30,9 @@
         </div>
         <div class="right-myshare">
           <Essay></Essay>
+          <Essay></Essay>
+          <Essay></Essay>
+          <Essay></Essay>
         </div>
       </div>
     </div>
