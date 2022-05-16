@@ -51,12 +51,13 @@ export default {
 </script>
 
 <style lang="less">
+@bgcolor: rgb(243, 243, 229);
 .s {
   margin: 0 auto;
   width: 60%;
 }
 .box-all {
-  background-color: rgb(243, 243, 229);
+  background-color: @bgcolor;
 
 }
 // 主要内容区域

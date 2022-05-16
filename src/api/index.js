@@ -14,10 +14,22 @@ const getEntries = () => {
   })
 }
 
+// 发布文章
+const reqWriting = (essayMessage) => {
+  return requests({
+    url: '/community/writing',
+    method: 'post',
+    data: {
+      essayMessage
+    }
+  })
+}
+
 
 
 
 export {
   reqAccount,
-  getEntries
+  getEntries,
+  reqWriting
 }

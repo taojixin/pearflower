@@ -35,7 +35,7 @@
       <!-- 右侧 -->
       <div class="right-community">
         <h4>交流社区</h4>
-        <Entry @click="readEssay('/essay')" v-for="item in entries" :key="item.id" :message="item"></Entry>
+        <Entry @click="readEssay('/othershare')" v-for="item in entries" :key="item.id" :message="item"></Entry>
       </div>
     </div>
     <div class="backtotop">

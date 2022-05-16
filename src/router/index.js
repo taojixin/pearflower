@@ -21,8 +21,10 @@ import community from '@/views/Community'
 import Writing from '@/views/Community/Writing'
 // 我的分享
 import MyShare from '@/views/Community/MyShare'
-// 
+// 文章
 import Essay from '@/components/community/Essay'
+// 其他人的分享
+import OtherShare from '@/views/Community/OtherShare'
 
 Vue.use(VueRouter)
 
@@ -43,7 +45,8 @@ const routes = [
   { path: '/community', component: community},
   { path: '/writing', component: Writing},
   { path: '/myshare', component: MyShare},
-  { path: '/essay', component: Essay}
+  { path: '/essay', component: Essay},
+  { path: '/othershare', component: OtherShare}
 ]
 
 const router = new VueRouter({

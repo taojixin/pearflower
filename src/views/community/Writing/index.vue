@@ -3,40 +3,79 @@
     <!-- <HeadOne></HeadOne> -->
     <Header></Header>
     <div class="content-writing q">
-      <img src="../../../assets/images/head.jpg" class="myhead">
+      <img src="../../../assets/images/head.jpg" class="myhead" />
       <div class="mywriting"><span>我的分享</span></div>
       <!-- 书写我的分享 -->
       <div class="write-writing">
-        <textarea class="writing-textarea"></textarea>
+        <input
+          type="text"
+          class="essay-title"
+          placeholder="标题"
+          v-model="essayTitle"
+        />
+        <textarea
+          class="writing-textarea"
+          v-model="essayContent"
+          placeholder="内容"
+        ></textarea>
         <span class="face"><i class="iconfont icon-biaoqing"></i></span>
         <span class="aite"><i class="iconfont icon-aite"></i></span>
         <span class="topic"><i class="iconfont icon-huati"></i></span>
         <span class="pic"><i class="iconfont icon-zhaoxiangji"></i></span>
       </div>
-      <button class="push-writing">发表</button>
-      <div class="back-community" @click="jump('/community')">
-        返回社区
-      </div>
+      <button class="push-writing" @click="pushWriting()">发表</button>
+      <div class="back-community" @click="jump('/community')">返回社区</div>
     </div>
-
   </div>
 </template>
 
 <script>
-import HeadOne from '@/components/Header/HeadOne.vue'
-import Header from '@/components/Header/index.vue'
+import { reqWriting } from "@/api/index";
+import { formatTime } from "@/utils/index";
+import HeadOne from "@/components/Header/HeadOne.vue";
+import Header from "@/components/Header/index.vue";
 export default {
   components: {
     HeadOne,
     Header,
   },
+  data() {
+    return {
+      // 文章标题
+      essayTitle: "",
+      // 文章内容
+      essayContent: "",
+    };
+  },
   methods: {
+    // 页面跳转
     jump(path) {
-      this.$router.push(path)
-    }
-  } 
-
-}
+      this.$router.push(path);
+    },
+    // 提交文章
+    async pushWriting() {
+      const timeNow = formatTime();
+      const essayMessage = {
+        title: this.essayTitle,
+        content: this.essayContent,
+        time: timeNow,
+        author: "风花雪月",
+        authorId: 1,
+      };
+      if (this.essayTitle === "" || this.essayContent === "") {
+        alert("标题内容不能为空！");
+        return;
+      } else {
+        const data = await reqWriting(essayMessage);
+        if (data.meta.code === 0) {
+          alert("发布成功！");
+        } else {
+          alert("发布失败！");
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style lang="less">
@@ -74,6 +113,15 @@ export default {
       }
     }
   }
+  // 标题
+  .essay-title {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    font-size: 30px;
+    padding-left: 15px;
+  }
   // 书写区域
   .write-writing {
     width: 80%;
@@ -102,7 +150,6 @@ export default {
         cursor: pointer;
         color: rgb(218, 232, 91);
       }
-
     }
   }
   // 提交按钮
@@ -118,7 +165,7 @@ export default {
     letter-spacing: 5px;
     font-size: 20px;
     background-color: rgb(206, 218, 96);
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       background-color: rgb(147, 153, 99);
       cursor: pointer;
@@ -133,7 +180,7 @@ export default {
     border-radius: 5px;
     background-color: rgb(206, 218, 96);
     text-align: center;
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       background-color: rgb(147, 153, 99);
       cursor: pointer;

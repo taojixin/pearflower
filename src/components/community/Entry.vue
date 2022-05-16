@@ -1,5 +1,5 @@
 <template>
-  <div class="entry" @click="readEssay('/essay')">
+  <div class="entry" @click="readEssay('/othershare')">
     <!-- 文章作者及时间 -->
     <div class="meta-container">
       <span class="username-entry">{{ message.name }}</span>
