@@ -26,10 +26,10 @@
           <span>我的分享</span>
         </div>
         <!-- 浏览记录 -->
-        <div class="mybrowsing my">
+        <!-- <div class="mybrowsing my">
           <i class="iconfont icon-shuliangtongji"></i>
           <span>浏览记录</span>
-        </div>
+        </div> -->
       </div>
 
       <!-- 右侧 -->

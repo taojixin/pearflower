@@ -155,7 +155,7 @@ export default {
   // 提交按钮
   .push-writing {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     left: 40%;
     transform: translateX(-50%);
     width: 100px;

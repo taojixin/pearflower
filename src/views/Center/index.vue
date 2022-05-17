@@ -42,7 +42,7 @@
         <router-view></router-view>
       </div>
     </div>
-    <div class="footer"></div>
+    <!-- <div class="footer"></div> -->
   </div>
 </template>
 
@@ -158,7 +158,7 @@ export default {
 
   .right {
     width: 1000px;
-    height: 630px;
+    // height: 630px;
     position: absolute;
     right: 0;
     top: 0;
