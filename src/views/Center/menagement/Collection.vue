@@ -18,15 +18,11 @@
           <input @click="selectOne()" ref="listRef" type="checkbox" />
           <img src="" alt="" />
           <p class="title">{{ item.title }}</p>
-          <span
-            >￥<span class="price">{{ item.unitPrice }}</span></span
-          >
+          <span>￥<span class="price">{{ item.unitPrice }}</span></span>
           <div class="count-collection">
             <input type="number" :value="item.count" />
           </div>
-          <span
-            >￥<span class="price">{{ item.totalPrice }}</span></span
-          >
+          <span>￥<span class="price">{{ item.totalPrice }}</span></span>
           <div class="operations-collection">删除</div>
         </li>
       </ul>
@@ -131,8 +127,7 @@ export default {
         }
         isTrue = true;
       };
-      console.log(isTrue);
-      if (isTrue === 'true') {
+      if (isTrue === true) {
         this.$refs.selectAllRef.checked = true;
       } else {
         this.$refs.selectAllRef.checked = false;
