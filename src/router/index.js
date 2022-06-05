@@ -29,7 +29,7 @@ import OtherShare from '@/views/Community/OtherShare'
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/community'},
+  { path: '/', redirect: '/center'},
   { path: '/center', component: Center, redirect: '/account', children: [
     { path: '/account', component: Account},
     { path: '/vip', component: Vip},

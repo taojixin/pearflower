@@ -176,6 +176,7 @@ export default {
     }
     .mycollection {
       top: 220px;
+      height: 37.4px;
     }
     .mybrowsing {
       top: 290px;
