@@ -12,8 +12,8 @@
         </ul>
         <div class="cart"><a href="#">购物车（0）</a></div>
         <ul class="ulRight">
-          <li><a href="#">登录</a><span>|</span></li>
-          <li><a href="#">注册</a><span>|</span></li>
+          <li><a href="#" @click="$router.push('/login')">登录</a><span>|</span></li>
+          <li><a href="#" @click="$router.push('/login')">注册</a><span>|</span></li>
           <li><a href="#">消息通知</a><span>|</span></li>
           <li><a href="#">个人中心</a><span>|</span></li>
         </ul>
@@ -23,11 +23,12 @@
     <!-- 功能选择区 -->
     <div class="banner">
       <ul>
-        <li><a href="#">特产介绍</a></li>
+        <li><a href="#" @click="$router.push('/home')">首页</a></li>
+        <li><a href="../../lihua/index.html">特产介绍</a></li>
         <li><a href="#">旅游攻略</a></li>
         <li><a href="#">风俗文化</a></li>
-        <li><a href="#">食品工坊</a></li>
-        <li><a href="#">交流社区</a></li>
+        <!-- <li><a href="#">食品工坊</a></li> -->
+        <li><a href="#" @click="$router.push('/community')">交流社区</a></li>
       </ul>
       <form>
         <input type="text" name="search" id="search" placeholder="雪花梨" />

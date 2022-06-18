@@ -26,10 +26,15 @@ import Essay from '@/components/community/Essay'
 // 其他人的分享
 import OtherShare from '@/views/Community/OtherShare'
 
+// 首页
+import Home from '@/views/Home.vue'
+// 登录
+import Login from "@/views/login.vue"
+
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', redirect: '/center'},
+  { path: '/', redirect: '/home'},
   { path: '/center', component: Center, redirect: '/account', children: [
     { path: '/account', component: Account},
     { path: '/vip', component: Vip},
@@ -46,7 +51,10 @@ const routes = [
   { path: '/writing', component: Writing},
   { path: '/myshare', component: MyShare},
   { path: '/essay', component: Essay},
-  { path: '/othershare', component: OtherShare}
+  { path: '/othershare', component: OtherShare},
+
+  { path: '/home', component: Home},
+  { path: '/login', component: Login}
 ]
 
 const router = new VueRouter({
